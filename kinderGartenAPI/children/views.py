@@ -1,15 +1,34 @@
-from rest_framework import viewsets
-from core.mixins import TenantSaveMixin
-from core.permissions import IsTenantStaffOrReadOnly
-from .models import Child, ClassRoom
-from .serializers import ChildSerializer, ClassRoomSerializer
+from rest_framework import generics, permissions
+from rest_framework.response import Response
+from rest_framework import status
+from children.models import Child
+from planning.models import ClassRoom
+from children.serializers import ChildSerializer,ClassRoomSerializer
 
-class ClassRoomViewSet(TenantSaveMixin, viewsets.ModelViewSet):
-    queryset = ClassRoom.objects.all()
+
+
+class ClassRoomListCreateView(generics.ListCreateAPIView):
     serializer_class = ClassRoomSerializer
-    permission_classes = [IsTenantStaffOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
 
-class ChildViewSet(TenantSaveMixin, viewsets.ModelViewSet):
-    queryset = Child.objects.all()
+    def get_queryset(self):
+        return ClassRoom.objects.filter(tenant=self.request.user.tenant)
+
+    def perform_create(self, serializer):
+        serializer.save(tenant=self.request.user.tenant)
+
+
+class ChildListCreateView(generics.ListCreateAPIView):
     serializer_class = ChildSerializer
-    permission_classes = [IsTenantStaffOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        tenant = self.request.user.tenant
+        classroom_id = self.request.query_params.get("classroom_id")
+        qs = Child.objects.filter(tenant=tenant)
+        if classroom_id:
+            qs = qs.filter(classroom_id=classroom_id)
+        return qs
+
+    def perform_create(self, serializer):
+        serializer.save(tenant=self.request.user.tenant)
