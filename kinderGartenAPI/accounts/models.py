@@ -11,8 +11,7 @@ class User(AbstractUser):
     tenant = models.ForeignKey(Tenant, on_delete=models.CASCADE, related_name="users")
     role = models.CharField(max_length=20, choices=ROLES, default="parent")
 
-    class Meta:
-        unique_together = [("tenant", "email")]
+
 
     def __str__(self):
         return f"{self.username} ({self.tenant.slug})"
