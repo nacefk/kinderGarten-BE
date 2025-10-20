@@ -28,7 +28,7 @@ class ChildSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
-            "age",
+            "birthdate",
             "parent_name",
             "avatar",
             "classroom",

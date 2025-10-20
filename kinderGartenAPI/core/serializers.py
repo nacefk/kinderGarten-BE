@@ -35,7 +35,7 @@ class ChildSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Child
-        fields = ["id", "name", "age", "classroom", "classroom_name", "parent_name", "avatar", "tenant"]
+        fields = ["id", "name", "birthdate", "classroom", "classroom_name", "parent_name", "avatar", "tenant"]
         read_only_fields = ["tenant"]
 
 

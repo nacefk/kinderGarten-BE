@@ -1,5 +1,7 @@
 from django.db import models
 from core.models import BaseTenantModel
+from datetime import date
+
 
 class ClassRoom(BaseTenantModel):
     name = models.CharField(max_length=80)
@@ -12,12 +14,13 @@ class ClassRoom(BaseTenantModel):
     def __str__(self):
         return self.name
 
+
 class Child(BaseTenantModel):
     name = models.CharField(max_length=120)
-    age = models.PositiveIntegerField()
-    classroom = models.ForeignKey(ClassRoom, on_delete=models.SET_NULL, null=True, related_name="children")
+    birthdate = models.DateField(null=True, blank=True)
+    classroom = models.ForeignKey(
+        ClassRoom, on_delete=models.SET_NULL, null=True, related_name="children"
+    )
     parent_name = models.CharField(max_length=120)
-    avatar = models.URLField(blank=True, default="")
+    avatar = models.CharField(max_length=500, blank=True, default="")
 
-    def __str__(self):
-        return self.name

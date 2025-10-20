@@ -9,5 +9,5 @@ class ClassRoomAdmin(admin.ModelAdmin):
 
 @admin.register(Child)
 class ChildAdmin(admin.ModelAdmin):
-    list_display = ("name", "age", "classroom", "tenant")
+    list_display = ("name", "birthdate", "classroom", "tenant")
     search_fields = ("name", "parent_name")

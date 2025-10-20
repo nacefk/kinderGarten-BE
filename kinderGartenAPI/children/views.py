@@ -32,3 +32,10 @@ class ChildListCreateView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(tenant=self.request.user.tenant)
+class ChildDetailView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ChildSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        # Limit to the current tenant only (security)
+        return Child.objects.filter(tenant=self.request.user.tenant)
