@@ -27,7 +27,8 @@ class ChildListCreateView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         tenant = self.request.user.tenant
-        classroom_id = self.request.query_params.get("classroom_id")
+        classroom_id = self.request.query_params.get("classroom_id") or self.request.query_params.get("classroom")
+
         qs = Child.objects.filter(tenant=tenant)
         if classroom_id:
             qs = qs.filter(classroom_id=classroom_id)
