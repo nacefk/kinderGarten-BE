@@ -7,15 +7,7 @@ from planning.models import ClassRoom
 class ClassRoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClassRoom
-        fields = [
-            "id",
-            "name",
-            "teacher_name",
-            "assistant_name",
-            "age_range",
-            "room",
-            "students_count",
-        ]
+        fields = "__all__"
 
 
 class ChildSerializer(serializers.ModelSerializer):
@@ -25,12 +17,6 @@ class ChildSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Child
-        fields = [
-            "id",
-            "name",
-            "birthdate",
-            "parent_name",
-            "avatar",
-            "classroom",
-            "classroom_name",
-        ]
+        fields =  "__all__"
+
+
