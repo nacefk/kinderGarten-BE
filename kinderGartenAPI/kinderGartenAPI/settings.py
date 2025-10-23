@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -134,10 +136,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "Africa/Tunis"
 
 USE_I18N = True
-
+CELERY_TIMEZONE = "Africa/Tunis"
+CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
+CELERY_TIMEZONE = "Africa/Tunis"
+CELERY_ENABLE_UTC = False
 USE_TZ = True
 CORS_ALLOW_ALL_ORIGINS = True # For development only
 
@@ -150,3 +156,17 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Celery
+CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
+CELERY_TIMEZONE = "Africa/Tunis"
+CELERY_ENABLE_UTC = False
+
+from celery.schedules import crontab  # ✅ safe to import here
+
+CELERY_BEAT_SCHEDULE = {
+    "clear-daily-reports-midnight-tunis": {
+        "task": "reports.tasks.clear_daily_reports",
+        "schedule": crontab(hour=0, minute=0),
+    },
+}

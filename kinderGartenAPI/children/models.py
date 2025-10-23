@@ -25,7 +25,6 @@ class Child(BaseTenantModel):
     parent_name = models.CharField(max_length=120)
     avatar = models.CharField(max_length=500, blank=True, default="")
 
-
     allergies = models.TextField(blank=True, default="")
     conditions = models.TextField(blank=True, default="")
     medication = models.TextField(blank=True, default="")
@@ -39,7 +38,8 @@ class Child(BaseTenantModel):
 
     next_payment_date = models.DateField(null=True, blank=True)
 
+    # ✅ New field
+    has_mobile_app = models.BooleanField(default=False)
+
     def __str__(self):
         return self.name
-
-

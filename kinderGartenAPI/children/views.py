@@ -10,6 +10,9 @@ from children.serializers import ChildSerializer, ClassRoomSerializer
 User = get_user_model()
 
 
+# -----------------------------------------------------------
+# 📚 CLASSROOM LIST / CREATE
+# -----------------------------------------------------------
 class ClassRoomListCreateView(generics.ListCreateAPIView):
     serializer_class = ClassRoomSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -21,13 +24,19 @@ class ClassRoomListCreateView(generics.ListCreateAPIView):
         serializer.save(tenant=self.request.user.tenant)
 
 
+# -----------------------------------------------------------
+# 👶 CHILD LIST / CREATE
+# -----------------------------------------------------------
 class ChildListCreateView(generics.ListCreateAPIView):
     serializer_class = ChildSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         tenant = self.request.user.tenant
-        classroom_id = self.request.query_params.get("classroom_id") or self.request.query_params.get("classroom")
+        classroom_id = (
+            self.request.query_params.get("classroom_id")
+            or self.request.query_params.get("classroom")
+        )
 
         qs = Child.objects.filter(tenant=tenant)
         if classroom_id:
@@ -36,22 +45,20 @@ class ChildListCreateView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         tenant = self.request.user.tenant
+
+        # ✅ Extract has_mobile_app flag from request safely (supports both camelCase & snake_case)
+        raw_flag = (
+            self.request.data.get("has_mobile_app")
+            or self.request.data.get("hasMobileApp")
+            or False
+        )
+        has_mobile_app = str(raw_flag).lower() in ["true", "1", "yes"]
+
+        # ✅ Save the child (tenant injected)
         child = serializer.save(tenant=tenant)
 
-        # ✅ Only generate credentials if has_mobile_app=True
-        has_mobile_app = (
-    self.request.data.get("has_mobile_app")
-    or self.request.data.get("hasMobileApp")
-    or False
-)
-
-        if str(has_mobile_app).lower() in ["true", "1", "yes"]:
-            from django.utils.text import slugify
-            from django.utils.crypto import get_random_string
-            from django.contrib.auth import get_user_model
-
-            User = get_user_model()
-
+        # ✅ Only generate credentials if mobile app access is enabled
+        if has_mobile_app:
             base_username = slugify(child.name)
             username = base_username
             if User.objects.filter(username=username).exists():
@@ -59,7 +66,7 @@ class ChildListCreateView(generics.ListCreateAPIView):
 
             password = get_random_string(
                 8,
-                allowed_chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789"
+                allowed_chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789",
             )
 
             user = User.objects.create_user(
@@ -69,11 +76,12 @@ class ChildListCreateView(generics.ListCreateAPIView):
                 first_name=child.name,
             )
 
+            # 🔗 Link child to user if applicable
             if hasattr(child, "user"):
                 child.user = user
                 child.save()
 
-            # Store generated credentials for response
+            # Store generated credentials for later response
             self.generated_username = username
             self.generated_password = password
         else:
@@ -81,6 +89,7 @@ class ChildListCreateView(generics.ListCreateAPIView):
             self.generated_password = None
 
     def create(self, request, *args, **kwargs):
+        """Extend DRF's create() to include generated credentials in response"""
         response = super().create(request, *args, **kwargs)
         if self.generated_username:
             response.data["username"] = self.generated_username
@@ -88,6 +97,9 @@ class ChildListCreateView(generics.ListCreateAPIView):
         return response
 
 
+# -----------------------------------------------------------
+# 👶 CHILD DETAIL (GET / PUT / DELETE)
+# -----------------------------------------------------------
 class ChildDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ChildSerializer
     permission_classes = [permissions.IsAuthenticated]
