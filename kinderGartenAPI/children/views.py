@@ -3,9 +3,10 @@ from rest_framework.response import Response
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
 from django.contrib.auth import get_user_model
-from children.models import Child
+from children.models import Child, Club
 from planning.models import ClassRoom
 from children.serializers import ChildSerializer, ClassRoomSerializer
+from .serializers import ClubSerializer
 
 User = get_user_model()
 
@@ -23,6 +24,25 @@ class ClassRoomListCreateView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(tenant=self.request.user.tenant)
 
+
+
+class ClubListCreateView(generics.ListCreateAPIView):
+    serializer_class = ClubSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Club.objects.filter(tenant=self.request.user.tenant)
+
+    def perform_create(self, serializer):
+        serializer.save(tenant=self.request.user.tenant)
+
+
+class ClubDetailView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ClubSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Club.objects.filter(tenant=self.request.user.tenant)
 
 # -----------------------------------------------------------
 # 👶 CHILD LIST / CREATE

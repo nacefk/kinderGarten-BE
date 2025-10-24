@@ -14,7 +14,16 @@ class ClassRoom(BaseTenantModel):
     def __str__(self):
         return self.name
 
+class Club(BaseTenantModel):
+    """Represents an extracurricular or in-class club (music, sport, etc.)"""
 
+    name = models.CharField(max_length=120, verbose_name="Nom du club")
+    description = models.TextField(blank=True, default="", verbose_name="Description")
+    instructor_name = models.CharField(max_length=120, blank=True, default="", verbose_name="Encadrant")
+    schedule = models.CharField(max_length=120, blank=True, default="", verbose_name="Horaires")
+
+    def __str__(self):
+        return self.name
 class Child(BaseTenantModel):
     name = models.CharField(max_length=120)
     birthdate = models.DateField(null=True, blank=True)
@@ -24,7 +33,12 @@ class Child(BaseTenantModel):
     )
     parent_name = models.CharField(max_length=120)
     avatar = models.CharField(max_length=500, blank=True, default="")
-
+    clubs = models.ManyToManyField(
+        "Club",
+        related_name="children",
+        blank=True,
+        verbose_name="Clubs",
+    )
     allergies = models.TextField(blank=True, default="")
     conditions = models.TextField(blank=True, default="")
     medication = models.TextField(blank=True, default="")
