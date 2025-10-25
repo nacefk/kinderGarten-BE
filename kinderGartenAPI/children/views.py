@@ -50,23 +50,33 @@ class ClubDetailView(generics.RetrieveUpdateDestroyAPIView):
 class ChildListCreateView(generics.ListCreateAPIView):
     serializer_class = ChildSerializer
     permission_classes = [permissions.IsAuthenticated]
-
     def get_queryset(self):
         tenant = self.request.user.tenant
+        qs = Child.objects.filter(tenant=tenant)
+
+        # ✅ Check classroom first
         classroom_id = (
             self.request.query_params.get("classroom_id")
             or self.request.query_params.get("classroom")
         )
-
-        qs = Child.objects.filter(tenant=tenant)
         if classroom_id:
-            qs = qs.filter(classroom_id=classroom_id)
+            return qs.filter(classroom_id=classroom_id)
+
+        # ✅ If no classroom, check club
+        club_id = (
+            self.request.query_params.get("club_id")
+            or self.request.query_params.get("club")
+        )
+        if club_id:
+            return qs.filter(clubs__id=club_id)
+
         return qs
+
 
     def perform_create(self, serializer):
         tenant = self.request.user.tenant
 
-        # ✅ Extract has_mobile_app flag from request safely (supports both camelCase & snake_case)
+        # ✅ Extract has_mobile_app flag
         raw_flag = (
             self.request.data.get("has_mobile_app")
             or self.request.data.get("hasMobileApp")
@@ -74,10 +84,10 @@ class ChildListCreateView(generics.ListCreateAPIView):
         )
         has_mobile_app = str(raw_flag).lower() in ["true", "1", "yes"]
 
-        # ✅ Save the child (tenant injected)
+        # ✅ Save the child with tenant
         child = serializer.save(tenant=tenant)
 
-        # ✅ Only generate credentials if mobile app access is enabled
+        # ✅ Handle app access user creation
         if has_mobile_app:
             base_username = slugify(child.name)
             username = base_username
@@ -96,12 +106,11 @@ class ChildListCreateView(generics.ListCreateAPIView):
                 first_name=child.name,
             )
 
-            # 🔗 Link child to user if applicable
+            # link user to child if field exists
             if hasattr(child, "user"):
                 child.user = user
                 child.save()
 
-            # Store generated credentials for later response
             self.generated_username = username
             self.generated_password = password
         else:
@@ -109,7 +118,7 @@ class ChildListCreateView(generics.ListCreateAPIView):
             self.generated_password = None
 
     def create(self, request, *args, **kwargs):
-        """Extend DRF's create() to include generated credentials in response"""
+        """Return username/password if generated."""
         response = super().create(request, *args, **kwargs)
         if self.generated_username:
             response.data["username"] = self.generated_username
@@ -125,4 +134,9 @@ class ChildDetailView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Child.objects.filter(tenant=self.request.user.tenant)
+        # ✅ Prefetch both classroom & clubs for complete data
+        return (
+            Child.objects.filter(tenant=self.request.user.tenant)
+            .select_related("classroom")
+            .prefetch_related("clubs")
+        )
