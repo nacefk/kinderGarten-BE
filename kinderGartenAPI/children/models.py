@@ -49,6 +49,9 @@ class Child(BaseTenantModel):
     emergency_contact_name = models.CharField(max_length=120, blank=True, default="")
     emergency_contact_relation = models.CharField(max_length=120, blank=True, default="")
     emergency_contact_phone = models.CharField(max_length=40, blank=True, default="")
+    responsible_name = models.CharField(max_length=120, blank=True, default="")
+    responsible_phone = models.CharField(max_length=40, blank=True, default="")
+
 
     next_payment_date = models.DateField(null=True, blank=True)
 

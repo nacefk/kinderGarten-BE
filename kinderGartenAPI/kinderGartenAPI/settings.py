@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     "reports",
     "planning",
     "corsheaders",
+    "chat",
+
 ]
 AUTH_USER_MODEL = "accounts.User"
 REST_FRAMEWORK = {

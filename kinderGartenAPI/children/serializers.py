@@ -28,6 +28,8 @@ class ClubSerializer(serializers.ModelSerializer):
 class ChildSerializer(serializers.ModelSerializer):
     # ✅ Automatically include classroom name in responses
     classroom_name = serializers.CharField(source="classroom.name", read_only=True)
+    teacher_name = serializers.CharField(source="classroom.teacher_name", read_only=True)
+
 
     # ✅ Many-to-many relationship for clubs
     clubs = serializers.PrimaryKeyRelatedField(
@@ -65,7 +67,11 @@ class ChildSerializer(serializers.ModelSerializer):
             "emergency_contact_name",
             "emergency_contact_relation",
             "emergency_contact_phone",
+            "responsible_name",
+            "responsible_phone",
+            "teacher_name",
             "next_payment_date",
             "has_mobile_app",
+
         ]
         read_only_fields = ["tenant"]
