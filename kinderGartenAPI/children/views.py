@@ -4,7 +4,7 @@ from django.utils.text import slugify
 from django.utils.crypto import get_random_string
 from django.contrib.auth import get_user_model
 from children.models import Child, Club
-from planning.models import ClassRoom
+from .models import ClassRoom
 from children.serializers import ChildSerializer, ClassRoomSerializer
 from .serializers import ClubSerializer
 

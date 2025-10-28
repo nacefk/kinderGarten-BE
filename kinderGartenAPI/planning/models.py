@@ -1,15 +1,24 @@
 from django.db import models
-from core.models import BaseTenantModel
-from children.models import ClassRoom
 
-class Event(BaseTenantModel):
-    title = models.CharField(max_length=160)
+class Event(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
     date = models.DateTimeField()
-    description = models.TextField(blank=True, default="")
-    classroom = models.ForeignKey(ClassRoom, on_delete=models.SET_NULL, null=True, blank=True)
+    class_name = models.ForeignKey(
+        "children.ClassRoom", on_delete=models.CASCADE, related_name="events"
+    )
 
-class PlanActivity(BaseTenantModel):
-    classroom = models.ForeignKey(ClassRoom, on_delete=models.CASCADE, related_name="plan")
-    day = models.CharField(max_length=12)  # "Lundi"..."Vendredi"
-    time = models.CharField(max_length=8)  # "08:00"
-    title = models.CharField(max_length=160)
+    def __str__(self):
+        return f"{self.title} ({self.date})"
+
+
+class WeeklyPlan(models.Model):
+    class_name = models.ForeignKey(
+        "children.ClassRoom", on_delete=models.CASCADE, related_name="plans"
+    )
+    day = models.CharField(max_length=20)
+    time = models.CharField(max_length=10)
+    title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.class_name.name} - {self.day} {self.time}"

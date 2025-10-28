@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from children.models import Child, Club
-from planning.models import ClassRoom
+from .models import ClassRoom
 
 
 class ClassRoomSerializer(serializers.ModelSerializer):
