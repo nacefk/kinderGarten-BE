@@ -9,7 +9,6 @@ class AttendanceRecord(BaseTenantModel):
     child = models.ForeignKey(Child, on_delete=models.CASCADE, related_name="attendance")
     date = models.DateField()
     status = models.CharField(max_length=10, choices=PRESENCE, default="present")
-    time = models.CharField(max_length=8, blank=True, default="")  # e.g. "09:15"
 
 class ExtraHourRequest(BaseTenantModel):
     child = models.ForeignKey(Child, on_delete=models.CASCADE, related_name="extra_hours")
