@@ -1,0 +1,433 @@
+[INFO] 2025-11-30 17:52:09 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 17:52:17 basehttp "GET /api/swagger/ HTTP/1.1" 301 0
+[INFO] 2025-11-30 17:52:17 basehttp code 400, message Bad request version ('·åzößdK+«§gSÀûÌ\x17W9e\x84Æ[³ë\x19\xadØkÎ\x0f_')
+[ERROR] 2025-11-30 17:52:17 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:52:17 basehttp code 400, message Bad request version ("G\\Àó¦©¡2\x01Ü\x19!\x97¦ÏY%F\x9b\x013=gÒ7ä\x01k]'=$\x00\x90Ü")
+[ERROR] 2025-11-30 17:52:17 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:52:26 basehttp code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00')
+[ERROR] 2025-11-30 17:52:26 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:52:26 basehttp code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03jÍÆ\x14ï\x8dú/þºyG!\x9cº\x16m\xad\x9cÞ\x80¢Ìñ\x0e\x8c$$\x04òLù')
+[ERROR] 2025-11-30 17:52:26 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:52:26 basehttp code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+[ERROR] 2025-11-30 17:52:26 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:52:26 basehttp code 400, message Bad request version ('ÔÚ5\x07°1ïÇ')
+[ERROR] 2025-11-30 17:52:26 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:53:01 basehttp "GET /api/swagger/ HTTP/1.1" 301 0
+[INFO] 2025-11-30 17:53:01 basehttp code 400, message Bad request syntax ('\x16\x03\x01\x06ò\x01\x00\x06î\x03\x03\x89\x8b\x96î¤zèE')
+[ERROR] 2025-11-30 17:53:01 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:53:01 basehttp code 400, message Bad request version ('\x0e}\x84\x04')
+[ERROR] 2025-11-30 17:53:01 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:47 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 17:54:51 basehttp code 400, message Bad request version ('\x11<B')
+[ERROR] 2025-11-30 17:54:51 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:51 basehttp code 400, message Bad request version ('OÄ1cÔÜho\x17&º;Ãþ')
+[ERROR] 2025-11-30 17:54:51 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:51 basehttp code 400, message Bad request version ('\x01©r]U')
+[ERROR] 2025-11-30 17:54:51 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:51 basehttp code 400, message Bad request version ('\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x00')
+[ERROR] 2025-11-30 17:54:51 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:54 basehttp code 400, message Bad request version ("V\x07\x06ç/o®H¶ó\x98\x07º\x12^\x96+T543à'U")
+[ERROR] 2025-11-30 17:54:54 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:54 basehttp code 400, message Bad request version ('\x16\x81(i»ba~q\x17\x8e=×¿lïáª\x9fÐ\x00')
+[ERROR] 2025-11-30 17:54:54 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:54 basehttp code 400, message Bad request version ('localhost\x00#\x00\x00\x00')
+[ERROR] 2025-11-30 17:54:54 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:54 basehttp code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00')
+[ERROR] 2025-11-30 17:54:54 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:54 basehttp code 400, message Bad request version ('\x99\x0e\x98C®Ã¤$i:GÌ5\x93ÖË*e\x8b\x05\x17\x9a7')
+[ERROR] 2025-11-30 17:54:54 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:54 basehttp code 400, message Bad request version ('A&a.ìy@¸\x08\x12î')
+[ERROR] 2025-11-30 17:54:54 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:59 basehttp code 400, message Bad request version ('^å¦*gE\x13ÐÉ\x83')
+[ERROR] 2025-11-30 17:54:59 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:54:59 basehttp code 400, message Bad request version ('ã\x84Óñ\x93©uæ\\\x05ø;')
+[ERROR] 2025-11-30 17:54:59 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:57:07 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 17:57:21 basehttp code 400, message Bad request version ('\x9aÜ>åEàÇËÇ\x00')
+[ERROR] 2025-11-30 17:57:21 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[INFO] 2025-11-30 17:57:21 basehttp code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06e')
+[ERROR] 2025-11-30 17:57:21 basehttp You're accessing the development server over HTTPS, but it only supports HTTP.
+[WARNING] 2025-11-30 17:57:33 log Not Found: /api/swagger/
+[WARNING] 2025-11-30 17:57:33 basehttp "GET /api/swagger/ HTTP/1.1" 404 3796
+[WARNING] 2025-11-30 17:57:33 log Not Found: /favicon.ico
+[WARNING] 2025-11-30 17:57:33 basehttp "GET /favicon.ico HTTP/1.1" 404 3686
+[INFO] 2025-11-30 17:58:10 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/kinderGartenAPI/urls.py changed, reloading.
+[INFO] 2025-11-30 17:58:11 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 17:59:31 autoreload Watching for file changes with StatReloader
+[ERROR] 2025-11-30 17:59:34 log Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/connection.py", line 2594, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/views.py", line 422, in initial
+    self.check_throttles(request)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/views.py", line 365, in check_throttles
+    if not throttle.allow_request(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/rest_framework/throttling.py", line 123, in allow_request
+    self.history = self.cache.get(self.key, [])
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/cache/backends/redis.py", line 188, in get
+    return self._cache.get(key, default)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/cache/backends/redis.py", line 100, in get
+    value = client.get(key)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/commands/core.py", line 1834, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/client.py", line 657, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/client.py", line 663, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/utils.py", line 196, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/connection.py", line 2596, in get_connection
+    connection = self.make_connection()
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/connection.py", line 2646, in make_connection
+    return self.connection_class(**kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/redis/connection.py", line 1255, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: AbstractConnection.__init__() got an unexpected keyword argument 'CLIENT_CLASS'
+[ERROR] 2025-11-30 17:59:34 basehttp "GET /api/swagger/ HTTP/1.1" 500 154485
+[INFO] 2025-11-30 18:00:15 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/kinderGartenAPI/settings.py changed, reloading.
+[INFO] 2025-11-30 18:00:16 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 18:00:24 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/kinderGartenAPI/settings.py changed, reloading.
+[INFO] 2025-11-30 18:00:25 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 18:00:35 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/kinderGartenAPI/settings.py changed, reloading.
+[INFO] 2025-11-30 18:00:36 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 18:00:42 basehttp "GET /api/swagger/ HTTP/1.1" 200 4640
+[INFO] 2025-11-30 18:00:43 basehttp "GET /api/schema/ HTTP/1.1" 200 121036
+[INFO] 2025-11-30 18:01:43 basehttp "GET /api/redoc/ HTTP/1.1" 200 721
+[INFO] 2025-11-30 18:01:43 basehttp "GET /api/schema/ HTTP/1.1" 200 54898
+[INFO] 2025-11-30 18:03:06 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/attendance/views.py changed, reloading.
+[INFO] 2025-11-30 18:03:07 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 18:03:14 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/attendance/views.py changed, reloading.
+[INFO] 2025-11-30 18:03:14 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 18:03:23 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/children/views_upload.py changed, reloading.
+[INFO] 2025-11-30 18:03:24 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 18:03:31 autoreload /Users/mac/Documents/kinderGarten-BE/kinderGartenAPI/attendance/views.py changed, reloading.
+[INFO] 2025-11-30 18:03:32 autoreload Watching for file changes with StatReloader
+[WARNING] 2025-11-30 18:23:48 basehttp "GET /admin/accounts/user/ HTTP/1.1" 400 76704
+[WARNING] 2025-11-30 18:23:49 basehttp "GET /favicon.ico HTTP/1.1" 400 76536
+[WARNING] 2025-11-30 18:24:05 basehttp "GET /admin/accounts/user/ HTTP/1.1" 400 76704
+[WARNING] 2025-11-30 18:24:06 basehttp "GET /favicon.ico HTTP/1.1" 400 76536
+[WARNING] 2025-11-30 18:24:24 log Not Found: /
+[WARNING] 2025-11-30 18:24:24 basehttp "GET / HTTP/1.1" 404 4099
+[WARNING] 2025-11-30 18:24:25 log Not Found: /favicon.ico
+[WARNING] 2025-11-30 18:24:25 basehttp "GET /favicon.ico HTTP/1.1" 404 4196
+[INFO] 2025-11-30 18:24:42 basehttp "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-11-30 18:24:42 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4176
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[INFO] 2025-11-30 18:24:42 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[INFO] 2025-11-30 18:24:45 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-11-30 18:24:45 basehttp "GET /admin/ HTTP/1.1" 200 11439
+[INFO] 2025-11-30 18:24:45 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[INFO] 2025-11-30 18:24:45 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[INFO] 2025-11-30 18:24:45 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[ERROR] 2025-11-30 18:24:51 log Internal Server Error: /admin/core/tenant/2/change/
+Traceback (most recent call last):
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: core_tenant.is_active
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 1840, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 1863, in _changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 897, in get_object
+    return queryset.get(**{field.name: object_id})
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: core_tenant.is_active
+[ERROR] 2025-11-30 18:24:51 basehttp "GET /admin/core/tenant/2/change/ HTTP/1.1" 500 195042
+[WARNING] 2025-11-30 18:25:25 basehttp "GET /favicon.ico HTTP/1.1" 400 76536
+[WARNING] 2025-11-30 18:25:29 basehttp "GET /admin/accounts/ HTTP/1.1" 400 76641
+[WARNING] 2025-11-30 18:25:29 basehttp "GET /favicon.ico HTTP/1.1" 400 76531
+[INFO] 2025-11-30 18:25:38 basehttp "GET /admin/ HTTP/1.1" 200 11439
+[ERROR] 2025-11-30 18:25:44 log Internal Server Error: /admin/accounts/user/
+Traceback (most recent call last):
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: core_tenant.is_active
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 145, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 545, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 216, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/filters.py", line 217, in create
+    return list_filter_class(
+        field, request, params, model, model_admin, field_path=field_path
+    )
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/filters.py", line 232, in __init__
+    self.lookup_choices = self.field_choices(field, request, model_admin)
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/contrib/admin/filters.py", line 273, in field_choices
+    return field.get_choices(include_blank=False, ordering=ordering)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1083, in get_choices
+    (choice_func(x), str(x)) for x in qs
+                                      ^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mac/Documents/kinderGarten-BE/venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: core_tenant.is_active
+[ERROR] 2025-11-30 18:25:44 basehttp "GET /admin/accounts/user/ HTTP/1.1" 500 218410
+[INFO] 2025-11-30 19:08:08 autoreload Watching for file changes with StatReloader
+[WARNING] 2025-11-30 19:08:37 basehttp "GET / HTTP/1.1" 400 76945
+[WARNING] 2025-11-30 19:08:38 basehttp "GET /favicon.ico HTTP/1.1" 400 76996
+[WARNING] 2025-11-30 19:08:52 basehttp "GET / HTTP/1.1" 400 76945
+[WARNING] 2025-11-30 19:08:52 basehttp "GET /favicon.ico HTTP/1.1" 400 76996
+[INFO] 2025-11-30 19:26:23 autoreload Watching for file changes with StatReloader
+[WARNING] 2025-11-30 19:26:56 basehttp "GET / HTTP/1.1" 400 77079
+[WARNING] 2025-11-30 19:26:56 basehttp "GET /favicon.ico HTTP/1.1" 400 76993
+[WARNING] 2025-11-30 19:26:57 basehttp "GET / HTTP/1.1" 400 77079
+[WARNING] 2025-11-30 19:26:57 basehttp "GET /favicon.ico HTTP/1.1" 400 76993
+[WARNING] 2025-11-30 19:27:01 log Not Found: /admin
+[WARNING] 2025-11-30 19:27:01 basehttp "GET /admin HTTP/1.1" 404 4172
+[INFO] 2025-11-30 19:27:49 autoreload Watching for file changes with StatReloader
+[WARNING] 2025-11-30 19:27:53 log Not Found: /admin
+[WARNING] 2025-11-30 19:27:53 basehttp "GET /admin HTTP/1.1" 404 4172
+[INFO] 2025-11-30 19:27:59 basehttp "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-11-30 19:27:59 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4176
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[INFO] 2025-11-30 19:27:59 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[INFO] 2025-11-30 19:28:33 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-11-30 19:28:33 basehttp "GET /admin/ HTTP/1.1" 200 9309
+[INFO] 2025-11-30 19:28:33 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[INFO] 2025-11-30 19:28:33 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[INFO] 2025-11-30 19:28:33 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[INFO] 2025-11-30 19:28:41 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 12831
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[INFO] 2025-11-30 19:28:41 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[INFO] 2025-11-30 19:28:41 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[INFO] 2025-11-30 19:29:00 basehttp "GET /admin/accounts/user/add/ HTTP/1.1" 200 28385
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+[INFO] 2025-11-30 19:29:00 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[INFO] 2025-11-30 19:29:00 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[INFO] 2025-11-30 19:32:02 autoreload Watching for file changes with StatReloader
+[INFO] 2025-11-30 19:32:05 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13152
+[INFO] 2025-11-30 19:32:05 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:32:13 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13152
+[INFO] 2025-11-30 19:32:13 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:32:14 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13152
+[INFO] 2025-11-30 19:32:14 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:33:08 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13152
+[INFO] 2025-11-30 19:33:08 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:33:08 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13152
+[INFO] 2025-11-30 19:33:08 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:35:26 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13667
+[INFO] 2025-11-30 19:35:26 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[INFO] 2025-11-30 19:35:26 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:35:36 basehttp "GET /admin/accounts/user/3/change/ HTTP/1.1" 200 28886
+[INFO] 2025-11-30 19:35:36 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:38:35 basehttp "POST /admin/accounts/user/3/change/ HTTP/1.1" 302 0
+[INFO] 2025-11-30 19:38:35 basehttp "GET /admin/accounts/user/ HTTP/1.1" 200 13893
+[INFO] 2025-11-30 19:38:35 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-11-30 19:45:39 autoreload Watching for file changes with StatReloader
+[WARNING] 2025-11-30 19:54:05 basehttp "POST /api/accounts/login HTTP/1.1" 403 2855
+[WARNING] 2025-11-30 19:54:50 basehttp "POST /api/accounts/login HTTP/1.1" 403 2855
+[INFO] 2025-11-30 19:55:26 basehttp "POST /api/accounts/login/ HTTP/1.1" 200 557
+[INFO] 2025-11-30 19:59:03 basehttp "POST /api/accounts/login/ HTTP/1.1" 200 557
+[INFO] 2025-11-30 19:59:04 basehttp "GET /api/attendance/extra/ HTTP/1.1" 200 52
+[INFO] 2025-11-30 19:59:04 basehttp "GET /api/attendance/summary/ HTTP/1.1" 200 24

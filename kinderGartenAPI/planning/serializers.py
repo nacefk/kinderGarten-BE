@@ -6,25 +6,41 @@ from children.serializers import ClassRoomSerializer
 
 # -------- Event Serializer --------
 class EventSerializer(serializers.ModelSerializer):
-    class_name = serializers.PrimaryKeyRelatedField(
-        queryset=ClassRoom.objects.all(),
-        write_only=True
+    classroom = serializers.PrimaryKeyRelatedField(
+        queryset=ClassRoom.objects.none(), write_only=True
     )
-    class_name_detail = ClassRoomSerializer(source="class_name", read_only=True)
+    classroom_detail = ClassRoomSerializer(source="classroom", read_only=True)
 
     class Meta:
         model = Event
-        fields = ["id", "title", "description", "date", "class_name", "class_name_detail"]
+        fields = ["id", "title", "description", "date", "classroom", "classroom_detail"]
+        read_only_fields = ["tenant"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # ✅ Dynamically set tenant-filtered queryset
+        request = self.context.get("request")
+        if request and request.user.is_authenticated:
+            tenant = request.user.tenant
+            self.fields["classroom"].queryset = ClassRoom.objects.filter(tenant=tenant)
 
 
 # -------- Weekly Plan Serializer --------
 class WeeklyPlanSerializer(serializers.ModelSerializer):
-    class_name = serializers.PrimaryKeyRelatedField(
-        queryset=ClassRoom.objects.all(),
-        write_only=True
+    classroom = serializers.PrimaryKeyRelatedField(
+        queryset=ClassRoom.objects.none(), write_only=True
     )
-    class_name_detail = ClassRoomSerializer(source="class_name", read_only=True)
+    classroom_detail = ClassRoomSerializer(source="classroom", read_only=True)
 
     class Meta:
         model = WeeklyPlan
-        fields = ["id", "title", "day", "time", "class_name", "class_name_detail"]
+        fields = ["id", "title", "day", "time", "classroom", "classroom_detail"]
+        read_only_fields = ["tenant"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # ✅ Dynamically set tenant-filtered queryset
+        request = self.context.get("request")
+        if request and request.user.is_authenticated:
+            tenant = request.user.tenant
+            self.fields["classroom"].queryset = ClassRoom.objects.filter(tenant=tenant)

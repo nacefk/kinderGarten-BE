@@ -14,18 +14,31 @@ class DailyReport(BaseTenantModel):
         on_delete=models.CASCADE,
         related_name="reports",
         verbose_name="Enfant",
+        db_index=True,
     )
-    meal = models.CharField(max_length=200, blank=True, default="", verbose_name="Repas")
-    nap = models.CharField(max_length=120, blank=True, default="", verbose_name="Sieste")
-    behavior = models.CharField(max_length=80, blank=True, default="", verbose_name="Comportement")
+    date = models.DateField(default=None)  # Will be set by task
+    meal = models.CharField(
+        max_length=200, blank=True, default="", verbose_name="Repas"
+    )
+    nap = models.CharField(
+        max_length=120, blank=True, default="", verbose_name="Sieste"
+    )
+    behavior = models.CharField(
+        max_length=80, blank=True, default="", verbose_name="Comportement"
+    )
     notes = models.TextField(blank=True, default="", verbose_name="Notes")
-
     has_mobile_app = models.BooleanField(default=False)
-    submitted_by = models.CharField(max_length=120, blank=True, default="", verbose_name="Soumis par")
+    submitted_by = models.CharField(
+        max_length=120, blank=True, default="", verbose_name="Soumis par"
+    )
 
     class Meta:
         verbose_name = "Rapport journalier"
         verbose_name_plural = "Rapports journaliers"
+        indexes = [
+            models.Index(fields=["tenant", "child"]),
+            models.Index(fields=["tenant", "date"]),
+        ]
 
     def __str__(self):
         return f"Rapport de {self.child.name}"
@@ -39,6 +52,7 @@ class ReportMedia(BaseTenantModel):
         on_delete=models.CASCADE,
         related_name="media_files",
         verbose_name="Rapport associé",
+        db_index=True,
     )
     file = models.FileField(
         upload_to=report_media_path,
@@ -49,6 +63,9 @@ class ReportMedia(BaseTenantModel):
     class Meta:
         verbose_name = "Fichier média du rapport"
         verbose_name_plural = "Fichiers médias des rapports"
+        indexes = [
+            models.Index(fields=["report"]),
+        ]
 
     def __str__(self):
         return f"Média du rapport {self.report_id}"
