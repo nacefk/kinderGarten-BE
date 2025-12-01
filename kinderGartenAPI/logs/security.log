@@ -165,3 +165,4 @@ Traceback (most recent call last):
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
 [WARNING] 2025-11-30 19:54:05 log Forbidden (CSRF cookie not set.): /api/accounts/login
 [WARNING] 2025-11-30 19:54:50 log Forbidden (CSRF cookie not set.): /api/accounts/login
+[WARNING] 2025-12-01 12:30:03 log Forbidden (CSRF cookie not set.): /api/children/classes/2/
