@@ -26,6 +26,7 @@ class DailyReportListCreateView(generics.ListCreateAPIView):
             DailyReport.objects.filter(tenant=tenant)
             .select_related("child")  # ✅ FK optimization
             .prefetch_related("media_files")  # ✅ Related media optimization
+            .order_by("-created_at")  # ✅ Order by latest first
         )
 
         # Filter by child if provided
@@ -103,4 +104,5 @@ class DailyReportDetailView(generics.RetrieveUpdateDestroyAPIView):
             DailyReport.objects.filter(tenant=self.request.user.tenant)
             .select_related("child")
             .prefetch_related("media_files")
+            .order_by("-created_at")  # ✅ Order by latest first
         )

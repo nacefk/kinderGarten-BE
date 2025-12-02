@@ -57,7 +57,7 @@ class ClubListCreateView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Club.objects.filter(tenant=self.request.user.tenant)
+        return Club.objects.filter(tenant=self.request.user.tenant).order_by("name")
 
     def perform_create(self, serializer):
         serializer.save(tenant=self.request.user.tenant)
@@ -68,7 +68,7 @@ class ClubDetailView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated, IsTenantMember]
 
     def get_queryset(self):
-        return Club.objects.filter(tenant=self.request.user.tenant)
+        return Club.objects.filter(tenant=self.request.user.tenant).order_by("name")
 
 
 # -----------------------------------------------------------
@@ -90,6 +90,7 @@ class ChildListCreateView(generics.ListCreateAPIView):
             Child.objects.filter(tenant=user.tenant)
             .select_related("classroom", "parent_user")  # ✅ FK optimization
             .prefetch_related("clubs")  # ✅ M2M optimization
+            .order_by("name")  # ✅ Ordering for consistent pagination
         )
 
         if user.role == "parent":
@@ -179,6 +180,7 @@ class ChildDetailView(generics.RetrieveUpdateDestroyAPIView):
             Child.objects.filter(tenant=user.tenant)
             .select_related("classroom", "parent_user")  # ✅ FK optimization
             .prefetch_related("clubs")  # ✅ M2M optimization
+            .order_by("name")  # ✅ Ordering for consistent pagination
         )
 
         if user.role == "parent":

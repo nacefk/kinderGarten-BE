@@ -7,6 +7,7 @@ from .views import (
     ExtraHourCreateView,
     ExtraHourPendingListView,
     ExtraHourRequestCreateView,
+    ExtraHourMyRequestsListView,
 )
 
 urlpatterns = [
@@ -15,6 +16,11 @@ urlpatterns = [
     path("update/", AttendanceBulkUpdateView.as_view(), name="attendance-update"),
     path("extra/", ExtraHourPendingListView.as_view(), name="extra-hour-pending"),
     path("extra-hours/", ExtraHourCreateView.as_view(), name="extra-hour-create"),
+    path(
+        "my-requests/",
+        ExtraHourMyRequestsListView.as_view(),
+        name="my-extra-hour-requests",
+    ),
     path(
         "extra/<int:pk>/action/",
         ExtraHourApproveRejectView.as_view(),

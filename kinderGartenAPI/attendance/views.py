@@ -152,3 +152,27 @@ class ExtraHourRequestCreateView(generics.CreateAPIView):
     def perform_create(self, serializer):
         tenant = self.request.user.tenant
         serializer.save(tenant=tenant, status="pending")
+
+
+class ExtraHourMyRequestsListView(generics.ListAPIView):
+    """Parents can view their own extra hour requests and their status"""
+
+    serializer_class = ExtraHourRequestSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        """Get extra hour requests for the current parent's children"""
+        from children.models import Child
+
+        tenant = self.request.user.tenant
+        user = self.request.user
+
+        # Get all children associated with this parent
+        children = Child.objects.filter(tenant=tenant, parent_user=user)
+
+        # Get all extra hour requests for those children
+        return (
+            ExtraHourRequest.objects.filter(tenant=tenant, child__in=children)
+            .select_related("child")
+            .order_by("-created_at")
+        )
