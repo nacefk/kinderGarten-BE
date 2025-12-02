@@ -39,6 +39,17 @@ class ClassRoomListCreateView(generics.ListCreateAPIView):
 
 
 # -----------------------------------------------------------
+# 📚 CLASSROOM DETAIL / UPDATE / DELETE
+# -----------------------------------------------------------
+class ClassRoomDetailView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ClassRoomSerializer
+    permission_classes = [permissions.IsAuthenticated, IsTenantMember]
+
+    def get_queryset(self):
+        return ClassRoom.objects.filter(tenant=self.request.user.tenant)
+
+
+# -----------------------------------------------------------
 # 🎨 CLUBS
 # -----------------------------------------------------------
 class ClubListCreateView(generics.ListCreateAPIView):
