@@ -90,6 +90,13 @@ class Child(BaseTenantModel):
         verbose_name="Parent account",
         db_index=True,
     )
+    parent_password = models.CharField(
+        max_length=255,
+        blank=True,
+        default="",
+        verbose_name="Parent account password",
+        help_text="Encrypted password for parent user account",
+    )
 
     class Meta:
         verbose_name = "Child"

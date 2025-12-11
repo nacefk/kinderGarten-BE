@@ -45,6 +45,18 @@ class ParentUserSerializer(serializers.ModelSerializer):
 
 
 # -----------------------------------------------------------
+# 👤 PARENT USER WITH CREDENTIALS SERIALIZER (For child profile)
+# -----------------------------------------------------------
+class ParentUserWithCredentialsSerializer(serializers.ModelSerializer):
+    """Shows parent credentials (username) for child's parent profile"""
+
+    class Meta:
+        model = User
+        fields = ["id", "username", "first_name", "email", "role"]
+        read_only_fields = fields
+
+
+# -----------------------------------------------------------
 # 👶 CHILD LIST SERIALIZER (Lightweight for listings)
 # -----------------------------------------------------------
 class ChildListSerializer(serializers.ModelSerializer):
@@ -91,8 +103,8 @@ class ChildSerializer(serializers.ModelSerializer):
     )
     club_details = ClubSerializer(source="clubs", many=True, read_only=True)
 
-    # ✅ Linked parent user (read-only)
-    parent_user = ParentUserSerializer(read_only=True)
+    # ✅ Linked parent user (read-only) - with credentials
+    parent_user = ParentUserWithCredentialsSerializer(read_only=True)
 
     # ✅ Frontend alias for consistency
     has_mobile_app = serializers.BooleanField(
@@ -107,6 +119,9 @@ class ChildSerializer(serializers.ModelSerializer):
         required=False,
         allow_null=True,
     )
+
+    # ✅ Make classroom read-only to avoid conflicts with classroom_id
+    classroom = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = Child
