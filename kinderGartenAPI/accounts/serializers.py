@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate
 from core.models import Tenant
 from .models import User
 
+
 class TenantAwareTokenObtainPairSerializer(TokenObtainPairSerializer):
     tenant = serializers.CharField(write_only=True)
 
@@ -26,6 +27,25 @@ class TenantAwareTokenObtainPairSerializer(TokenObtainPairSerializer):
         # ✅ Generate JWT
         data = super().validate(attrs)
         data["tenant"] = tenant.slug
+        data["tenant_name"] = tenant.name  # ✅ Add tenant name
         data["role"] = user.role
         data["username"] = user.username
+        data["user_id"] = user.id
+        data["email"] = user.email
+
+        # ✅ If parent user, include their child's credentials (username, password, tenant)
+        if user.role == "parent":
+            try:
+                child = user.children.first()  # Get the associated child
+                if child:
+                    data["credentials"] = {
+                        "username": user.username,  # Parent username
+                        "password": child.parent_password,  # Parent password
+                        "tenant": tenant.slug,  # Tenant slug
+                        "tenant_name": tenant.name,  # Tenant name
+                        "child_name": child.name,  # Child name for reference
+                    }
+            except Exception:
+                pass
+
         return data

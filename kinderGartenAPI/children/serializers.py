@@ -106,10 +106,28 @@ class ChildSerializer(serializers.ModelSerializer):
     # ✅ Linked parent user (read-only) - with credentials
     parent_user = ParentUserWithCredentialsSerializer(read_only=True)
 
+    # ✅ Parent login credentials in a single object
+    parent_credentials = serializers.SerializerMethodField(read_only=True)
+
+    def get_parent_credentials(self, obj):
+        """Return parent login credentials (username, password, tenant) - ONLY FOR ADMINS"""
+        request = self.context.get("request")
+
+        # ✅ Only show credentials if user is admin
+        if not request or request.user.role != "admin":
+            return None
+
+        if not obj.parent_user or not obj.parent_password:
+            return None
+
+        return {
+            "username": obj.parent_user.username,
+            "password": obj.parent_password,
+            "tenant": obj.tenant.slug if obj.tenant else None,
+        }
+
     # ✅ Frontend alias for consistency
-    has_mobile_app = serializers.BooleanField(
-        write_only=True, required=False, default=False
-    )
+    has_mobile_app = serializers.BooleanField(required=False, default=False)
 
     # ✅ Write-friendly classroom
     classroom_id = serializers.PrimaryKeyRelatedField(
@@ -136,6 +154,7 @@ class ChildSerializer(serializers.ModelSerializer):
             "clubs",
             "club_details",
             "parent_user",
+            "parent_credentials",  # ✅ All parent login credentials in one object
             "parent_name",
             "avatar",
             "allergies",

@@ -9,10 +9,10 @@ def report_media_path(instance, filename):
 
 
 class DailyReport(BaseTenantModel):
-    child = models.ForeignKey(
+    child = models.OneToOneField(
         Child,
         on_delete=models.CASCADE,
-        related_name="reports",
+        related_name="report",
         verbose_name="Enfant",
         db_index=True,
     )

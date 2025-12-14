@@ -7,56 +7,64 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('children', '0005_child_allergies_child_conditions_child_doctor_and_more'),
-        ('core', '0001_initial'),
-        ('reports', '0001_initial'),
+        ("children", "0005_child_allergies_child_conditions_child_doctor_and_more"),
+        ("core", "0001_initial"),
+        ("reports", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='dailyreport',
-            options={'verbose_name': 'Rapport journalier', 'verbose_name_plural': 'Rapports journaliers'},
+            name="dailyreport",
+            options={
+                "verbose_name": "Rapport journalier",
+                "verbose_name_plural": "Rapports journaliers",
+            },
         ),
         migrations.AlterUniqueTogether(
-            name='dailyreport',
-            unique_together={('tenant', 'child')},
+            name="dailyreport",
+            unique_together={("tenant", "child")},
         ),
         migrations.AlterField(
-            model_name='dailyreport',
-            name='behavior',
-            field=models.CharField(blank=True, default='', max_length=80, verbose_name='Comportement'),
+            model_name="dailyreport",
+            name="behavior",
+            field=models.CharField(
+                blank=True, default="", max_length=80, verbose_name="Comportement"
+            ),
         ),
         migrations.AlterField(
-            model_name='dailyreport',
-            name='child',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reports', to='children.child', verbose_name='Enfant'),
+            model_name="dailyreport",
+            name="child",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="reports",
+                to="children.child",
+                verbose_name="Enfant",
+            ),
         ),
         migrations.AlterField(
-            model_name='dailyreport',
-            name='meal',
-            field=models.CharField(blank=True, default='', max_length=200, verbose_name='Repas'),
+            model_name="dailyreport",
+            name="meal",
+            field=models.CharField(
+                blank=True, default="", max_length=200, verbose_name="Repas"
+            ),
         ),
         migrations.AlterField(
-            model_name='dailyreport',
-            name='nap',
-            field=models.CharField(blank=True, default='', max_length=120, verbose_name='Sieste'),
+            model_name="dailyreport",
+            name="nap",
+            field=models.CharField(
+                blank=True, default="", max_length=120, verbose_name="Sieste"
+            ),
         ),
         migrations.AlterField(
-            model_name='dailyreport',
-            name='notes',
-            field=models.TextField(blank=True, default='', verbose_name='Notes'),
+            model_name="dailyreport",
+            name="notes",
+            field=models.TextField(blank=True, default="", verbose_name="Notes"),
         ),
         migrations.AlterField(
-            model_name='dailyreport',
-            name='submitted_by',
-            field=models.CharField(blank=True, default='', max_length=120, verbose_name='Soumis par'),
-        ),
-        migrations.RemoveField(
-            model_name='dailyreport',
-            name='activity',
-        ),
-        migrations.RemoveField(
-            model_name='dailyreport',
-            name='date',
+            model_name="dailyreport",
+            name="submitted_by",
+            field=models.CharField(
+                blank=True, default="", max_length=120, verbose_name="Soumis par"
+            ),
         ),
     ]

@@ -6912,3 +6912,25 @@ LINE 1: ...s_mobile_app", "children_child"."parent_user_id", "children_...
                                                              ^
 
 [ERROR] 2025-12-10 19:51:48 basehttp "GET /api/children/me/ HTTP/1.1" 500 189840
+[ERROR] 2025-12-13 17:18:42 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:18:42 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:18:42 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:18:42 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:19:30 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:19:30 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:20:18 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:20:18 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:21:34 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:21:34 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:24:22 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:24:22 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:24:22 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:24:22 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:30:44 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:30:44 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 17:30:44 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 17:30:44 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-13 20:57:33 log Internal Server Error: /api/reports/
+[ERROR] 2025-12-13 20:57:33 basehttp "POST /api/reports/ HTTP/1.1" 500 35
+[ERROR] 2025-12-14 13:24:04 log Internal Server Error: /api/reports/media/3/
+[ERROR] 2025-12-14 13:24:04 basehttp "DELETE /api/reports/media/3/ HTTP/1.1" 500 39

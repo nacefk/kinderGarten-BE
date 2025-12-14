@@ -6,13 +6,9 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('reports', '0003_alter_dailyreport_unique_together'),
+        ("reports", "0003_alter_dailyreport_unique_together"),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='dailyreport',
-            name='has_mobile_app',
-            field=models.BooleanField(default=False),
-        ),
+        # has_mobile_app is already included in 0001_initial migration
     ]
